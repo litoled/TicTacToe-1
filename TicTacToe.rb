@@ -29,17 +29,17 @@ class Game
   @@player1 = Player.new
   @@player2 = Player.new
 
-  def initialising
-    puts "Welcome to the best game in the world \"Tic-Tac-Toe\" "
-    puts "Player 1 write his name:"
+  def initialize
+    puts "Welcome to the best game in the world : \"Tic-Tac-Toe\" "
+    puts "Player 1, write your name:"
 
     namePl = gets.chomp
     @@player1.name = @@player1.verificationName(namePl)
-    puts "Player 2 write his name:"
+    puts "Player 2, write your name:"
     namePl = gets.chomp
     @@player2.name = @@player1.verificationName(namePl)
 
-    puts @@player1.name + " wonts to play with CROSSES or with ZERO? C/Z"
+    puts @@player1.name + " , would you like to play with CROSSES or with ZERO? C/Z"
     daggerZero = gets.chomp
     @@player1.daggerZero = @@player1.verificationDaggerZero(daggerZero.upcase)
     @@player1.daggerZero
@@ -51,11 +51,11 @@ class Game
     gamee
   end
 
-  def gamee
+  def game
     if ()
-    puts @@player1.name + " chooses where he wants to put " + @@player1.daggerZero + " 1 - 9"
+    puts @@player1.name + " , choose where you want to put " + @@player1.daggerZero + " 1 - 9"
   end
 end
 
 game = Game.new
-game.initialising
+#game.initialize doesn't work
